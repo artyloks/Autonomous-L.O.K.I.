@@ -8,12 +8,12 @@ import time
 import random  
 
 # --- CONFIGURATION ---
-
 # Use this exact format to ensure connection
 loki_brain = LLM(
     model="ollama/phi3", 
     base_url="http://localhost:11434"
 )
+
 # --- MEMORY SYSTEM ---  
 def load_memory():  
     try:  
