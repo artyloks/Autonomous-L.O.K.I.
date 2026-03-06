@@ -6,10 +6,9 @@ import yfinance as yf
 import time  
 import random  
 
-# --- CONFIGURATION ---  
-GENERATOR = pipeline("text-generation", model="distilgpt2", max_length=500)  
-CLASSIFIER = pipeline("zero-shot-classification", model="facebook/bart-large-mnli")  
-SUMMARIZER = pipeline("summarization", model="facebook/bart-large-cnn")  
+# --- CONFIGURATION ---
+loki_brain = LLM(model="ollama/phi3", base_url="http://localhost:11434")
+
 
 # --- MEMORY SYSTEM ---  
 def load_memory():  
